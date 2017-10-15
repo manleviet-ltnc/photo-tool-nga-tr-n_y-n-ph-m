@@ -7,22 +7,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Manning.myphotoAlbum;
 
 namespace MyPhotos
 {
     public partial class MainForm : Form
     {
+        private Albummanager _manager;
+        private Albummanager Manager
+        {
+            get { return _manager; }
+            set { _manager = value; }
+        }
         public MainForm()
         {
             InitializeComponent();
+            NewAlbum();
+        }
+        private void NewAlbum ()
+        {
+            // TODO :  clean up, save existing album
+            Manager = new Albummanager();
+            DisplayAlbum();
+        }
+        private void DisplayAlbum()
+        {
+            pbxPhoto.Image = Manager.CurrentImage;
             SetTitleBar();
             SetStatusStrip(null);
         }
+
         private void SetTitleBar()
         {
             Version ver = new Version(Application.ProductVersion);
-            Text = String.Format("MyPhotos {0:0}.{1:0}",
-                                   ver.Major, ver.Minor);
+            string name = Manager.FullName;
+            Text = String.Format("{2} -MyPhotos {0:0}.{1:0}",
+                ver.Major, ver.Minor, string.IsNullOrEmpty(name) ? "titled" : name);
         }
 
 
@@ -89,7 +109,7 @@ namespace MyPhotos
         {
             if (pbxPhoto.Image != null)
             {
-                sttInfo.Text = path;
+                sttInfo.Text = Manager.Current.FileName;
                 sttImageSize.Text = String.Format("{0:#}x{1:#}",
                                                pbxPhoto.Image.Width,
                                                pbxPhoto.Image.Height);
@@ -103,5 +123,139 @@ namespace MyPhotos
             }
 
         }
+
+        private void mnuFileNew_Click(object sender, EventArgs e)
+        {
+            NewAlbum();
+        }
+
+        private void mnuFileOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Open Album";
+            dlg.Filter = "Album files (*.abm)|*.abm"
+                          + "|All files (*.*)|*.*";
+            dlg.InitialDirectory = Albummanager.DefaultPath;
+            dlg.RestoreDirectory = true;
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                //TODO: save any existing album
+                // open the new album
+                //TODO: handle invalid album file 
+                Manager = new Albummanager(dlg.FileName);
+                DisplayAlbum();
+            }
+                
+            dlg.Dispose();
+        }
+        private void SaveAlbum(string name)
+        {
+            Manager.Save(name, true);
+        }
+        private void SaveAlbum()
+        { 
+            if (string.IsNullOrEmpty(Manager.FullName))
+                SaveAsAlbum();
+            else
+            {
+                //Save the album under the existing name
+                SaveAlbum(Manager.FullName);
+            }
+        }
+        private void SaveAsAlbum()
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Title = "Save Album";
+            dlg.DefaultExt = "abm";
+            dlg.Filter= "Album files (*.abm)|*.abm"
+                          + "|All files (*.*)|*.*";
+            dlg.InitialDirectory = Albummanager.DefaultPath;
+            dlg.RestoreDirectory = true;
+            if (dlg.ShowDialog()==DialogResult.OK)
+            {
+                SaveAlbum(dlg.FileName);
+                //Update titler bar to include new name
+                SetTitleBar();
+            }
+            dlg.Dispose();
+        }
+
+        private void mnuFileSave_Click(object sender, EventArgs e)
+        {
+            SaveAlbum();
+        }
+
+        private void mnuFileSaveAs_Click(object sender, EventArgs e)
+        {
+            SaveAsAlbum();
+        }
+
+        private void mnuEditAdd_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Title = "Add photos";
+            dlg.Multiselect = true;
+            dlg.Filter = "Image Files (JPEG, GIF, BMP, etc.)|"
+                           + "*.jpg;*.jpeg;*.gif;*.bmp;"
+                           + "*.tif;*.tiff;*.png|"
+                           + "GIF files (*.gif)|*.gif|"
+                           + "TIFF files (*.tif;*.tiff)|*.tif;*.tiff|"
+                           + "PNG files (*.png)|*.png|"
+                            + "All files (*.*)|*.*";
+            dlg.InitialDirectory = Environment.CurrentDirectory;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string[] files = dlg.FileNames;
+                int index = 0;
+                foreach (string s in files)
+                {
+                    photograph photo = new photograph(s);
+                    index = Manager.Album.IndexOf(photo);
+                    if (index < 0)
+                        Manager.Album.Add(photo);
+                    else
+                        photo.Dispose(); 
+                }
+                Manager.Index = Manager.Album.Count - 1;
+            }
+            dlg.Dispose();
+            DisplayAlbum();
+        }
+
+        private void mnuEditRemove_Click(object sender, EventArgs e)
+        {
+            if (Manager.Album.Count > 0)
+            {
+                Manager.Album.RemoveAt(Manager.Index);
+                DisplayAlbum();
+            }
+        
+        }
+
+        private void mnuNext_Click(object sender, EventArgs e)
+        {
+            if (Manager.Index < Manager.Album.Count - 1)
+            {
+                Manager.Index++;
+                DisplayAlbum();
+            }
+        }
+
+        private void mnuPrevious_Click(object sender, EventArgs e)
+        {
+            if (Manager.Index > 0)
+            {
+                Manager.Index--;
+                DisplayAlbum();
+            }
+        }
+
+        private void ctxMenuPhoto_Opening(object sender, CancelEventArgs e)
+        {
+            mnuNext.Enabled= (Manager.Index < Manager.Album.Count - 1);
+            mnuPrevious.Enabled = (Manager.Index > 0);
+        }
     }
+    
 }
