@@ -16,7 +16,8 @@ namespace Manning.myphotoAlbum
      public class AlbumStorage
     {
         static private int CurentVersion = 63;
-        static private void WriteAlbum(PhotoAlbum album, string path)
+
+        static public void WriteAlbum(PhotoAlbum album, string path)
         {
             StreamWriter sw = null;
             try
