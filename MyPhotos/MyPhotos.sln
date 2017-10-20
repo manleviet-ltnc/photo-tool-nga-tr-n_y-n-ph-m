@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotos", "MyPhotos\MyPhot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myphotoAlbum", "myphotoAlbum\myphotoAlbum.csproj", "{FC7C67AC-8B3F-42E3-94D6-B6CA3B80256D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPhotoControls", "MyPhotoControls\MyPhotoControls.csproj", "{3EA8BDF6-DBC6-4F6B-B7D6-FE5CC683D3EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FC7C67AC-8B3F-42E3-94D6-B6CA3B80256D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC7C67AC-8B3F-42E3-94D6-B6CA3B80256D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC7C67AC-8B3F-42E3-94D6-B6CA3B80256D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EA8BDF6-DBC6-4F6B-B7D6-FE5CC683D3EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA8BDF6-DBC6-4F6B-B7D6-FE5CC683D3EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA8BDF6-DBC6-4F6B-B7D6-FE5CC683D3EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA8BDF6-DBC6-4F6B-B7D6-FE5CC683D3EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -94,7 +94,7 @@ namespace Manning.myphotoAlbum
         public photograph ( string fileName)
         {
             _fileName = fileName;
-            _fileName = null;
+            _bitmap = null;
             _caption = System.IO.Path.GetFileNameWithoutExtension(fileName);
     
         }
