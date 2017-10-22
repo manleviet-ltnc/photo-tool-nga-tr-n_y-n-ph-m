@@ -16,6 +16,12 @@ namespace Manning.myphotoAlbum
             get { return _defaultPath; }
             set { _defaultPath = value; }
         }
+        private string _pwd;
+        public string Password
+        {
+            get { return _pwd; }
+            set { _pwd = value; }
+        }
         static Albummanager ()
         {
             _defaultPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\Albums";

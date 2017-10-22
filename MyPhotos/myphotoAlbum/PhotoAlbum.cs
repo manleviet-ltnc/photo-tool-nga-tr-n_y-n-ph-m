@@ -9,6 +9,27 @@ namespace Manning.myphotoAlbum
 {
     public class PhotoAlbum : Collection<photograph>, IDisposable
     {
+        public enum DescriptorOption { FileName, Caption, DateTaken }
+        private string _title;
+        public string Title
+        {
+            get { return _title; }
+            set
+            {
+                _title = value;
+                HasChanged = true;
+            }
+        }
+        private DescriptorOption _descriptor;
+        public DescriptorOption PhotoDescriptor
+        {
+            get { return _descriptor; }
+            set
+            {
+                _descriptor = value;
+                HasChanged = true;
+            }
+        }
         private bool _hasChanged = false;
         public bool HasChanged
         {
@@ -28,11 +49,20 @@ namespace Manning.myphotoAlbum
                         p.HasChanged = false;
             }
         }
+        public PhotoAlbum()
+        {
+            ClearSettings();
+        }
         public photograph Add(string filename)
         {
             photograph p = new photograph(filename);
             base.Add(p);
             return p;
+        }
+        private void ClearSettings()
+        {
+            _title = null;
+            _descriptor = DescriptorOption.Caption;
         }
         protected override void ClearItems()
         {
@@ -59,10 +89,28 @@ namespace Manning.myphotoAlbum
             base.SetItem(index, item);
             HasChanged = true;
         }
-       public void Dispose ()
+        public void Dispose()
         {
+            ClearSettings();
             foreach (photograph p in this)
                 p.Dispose();
+        }
+        public string GetDescription(photograph photo)
+        {
+            switch (PhotoDescriptor)
+            {
+                case DescriptorOption.Caption:
+                    return photo.Caption;
+                case DescriptorOption.DateTaken:
+                    return photo.DateTaken.ToShortDateString();
+                case DescriptorOption.FileName:
+                    return photo.FileName;
+            }
+            throw new ArgumentException( "Unrecognized photo descriptor option.");
+        }
+        public string GetDescription(int index)
+        {
+            return GetDescription(this[index]);
         }
     }
 

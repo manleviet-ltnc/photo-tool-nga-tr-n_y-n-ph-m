@@ -1,0 +1,6 @@
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\myphotoAlbum\bin\Debug\myphotoAlbum.dll
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\myphotoAlbum\bin\Debug\myphotoAlbum.pdb
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\myphotoAlbum\obj\Debug\myphotoAlbum.csprojResolveAssemblyReference.cache
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\myphotoAlbum\obj\Debug\myphotoAlbum.csproj.CoreCompileInputs.cache
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\myphotoAlbum\obj\Debug\myphotoAlbum.dll
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\myphotoAlbum\obj\Debug\myphotoAlbum.pdb
