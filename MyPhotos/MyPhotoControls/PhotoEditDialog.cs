@@ -34,19 +34,17 @@ namespace Manning.MyPhotoControls
 
             InitializeDialog(photo);
         }
-                public PhotoEditDialog(Albummanager mgr) : this()
-                    {
-                    if (mgr == null)
-                        throw new ArgumentNullException("The mgr parameter cannot be null");
-                    _manager = mgr;
-                    InitializeDialog(mgr.Current);
-
-               
+        public PhotoEditDialog(Albummanager mgr) : this()
+            {
+            if (mgr == null)
+                throw new ArgumentNullException("The mgr parameter cannot be null");
+            _manager = mgr;
+            InitializeDialog(mgr.Current);
         }
 
         private void InitializeDialog(photograph photo)
         {
-            _photo = Photo;
+            _photo = photo;
             ResetDialog();
             mskDateTaken.ValidatingType = typeof(CurrentDate);
         }

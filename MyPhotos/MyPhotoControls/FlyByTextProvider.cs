@@ -10,7 +10,7 @@ using System.Windows.Forms;
 namespace Manning.MyPhotoControls
 {
     [ProvideProperty("FlybyText",typeof(ToolStripMenuItem))]
-    class FlyByTextProvider : Component, IExtenderProvider
+    public class FlyByTextProvider : Component, IExtenderProvider
     {
         public FlyByTextProvider (IContainer container)
         {

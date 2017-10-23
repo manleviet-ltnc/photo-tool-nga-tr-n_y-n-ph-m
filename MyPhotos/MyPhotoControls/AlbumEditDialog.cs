@@ -67,8 +67,7 @@ namespace Manning.MyPhotoControls
             else
                 return true;
         }
-        protected override void OnClosing(
-CancelEventArgs e)
+        protected override void OnClosing(CancelEventArgs e)
         {
             if (DialogResult == DialogResult.OK)
             {

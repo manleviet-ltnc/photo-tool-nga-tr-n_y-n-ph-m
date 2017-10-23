@@ -157,8 +157,20 @@ namespace MyPhotos
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 string path = dlg.FileName;
-
-                if (!SaveAndCloseAlbum())
+                string pwd = null;
+                // Get password if encrypted
+                if (AlbumStorage.IsEncrypted(path))
+                {
+                    using (AlbumPasswordDialog pwdDlg
+                    = new AlbumPasswordDialog())
+                    {
+                        pwdDlg.Album = path;
+                        if (pwdDlg.ShowDialog() != DialogResult.OK)
+                            return; // Open cancelled
+                        pwd = pwdDlg.Password;
+                    }
+                }
+                    if (!SaveAndCloseAlbum())
                     return;
 
 
@@ -166,7 +178,7 @@ namespace MyPhotos
                 {
                     // open the new album
                     //TODO: handle invalid album file 
-                    Manager = new Albummanager(path);
+                    Manager = new Albummanager(path, pwd);
                 }
                 catch (AlbumStorageException aex)
                 {
@@ -431,6 +443,7 @@ namespace MyPhotos
                     case Keys.Tab:
                         mnuNext.PerformClick();
                         return true;
+
                     case Keys.Shift | Keys.Tab:
                         mnuPrevious.PerformClick();
                         return true;
@@ -438,6 +451,8 @@ namespace MyPhotos
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+       
     }
 }
 
