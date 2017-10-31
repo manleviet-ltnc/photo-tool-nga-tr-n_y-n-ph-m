@@ -10,7 +10,7 @@ namespace Manning.myphotoAlbum
     /// the photograph class represents a photographic
     /// image stored in the file system
     /// </summary>
-    public class photograph : IDisposable
+    public class photograph : IDisposable, IFormattable
     {
         private string _fileName ;
         public string FileName
@@ -117,7 +117,37 @@ namespace Manning.myphotoAlbum
         {
             return FileName;
         }
-        public void ReleaseImage()
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            if (string.IsNullOrEmpty(format))
+                format = "f";
+
+            char first = format.ToLower()[0];
+            if (format.Length == 1)
+            {
+                switch (first)
+                {
+                    case 'c': return Caption;
+                    case 'd': return DateTaken.ToShortDateString();
+                    case 'f': return FileName;
+                }
+            }
+            else if (first == 'd')
+                return DateTaken.ToString(format.Substring(1), formatProvider);
+
+            throw new FormatException ();
+        }
+
+        public string ToString(string format)
+        {
+            return ToString(format, null);
+        }
+
+        public string ToString(IFormatProvider fp)
+        {
+            return ToString(null, fp);
+        }
+            public void ReleaseImage()
         {
             if (_bitmap != null)
             {
@@ -130,5 +160,7 @@ namespace Manning.myphotoAlbum
             ReleaseImage();
         }
 
+       
+        }
     }
-}
+

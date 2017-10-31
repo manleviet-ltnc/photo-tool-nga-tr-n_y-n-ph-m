@@ -30,6 +30,18 @@ namespace Manning.myphotoAlbum
                 HasChanged = true;
             }
         }
+
+        public string GetDesciptorFormat()
+        {
+            switch (PhotoDescriptor )
+            {
+                case DescriptorOption.Caption: return "c";
+                case DescriptorOption.DateTaken: return "d";
+                case DescriptorOption.FileName:
+                default:
+                    return "f";
+            }
+        }
         private bool _hasChanged = false;
         public bool HasChanged
         {

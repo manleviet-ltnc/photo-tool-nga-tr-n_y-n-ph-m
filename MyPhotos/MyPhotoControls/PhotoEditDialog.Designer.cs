@@ -35,8 +35,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtphotoFile = new System.Windows.Forms.TextBox();
             this.txtCaption = new System.Windows.Forms.TextBox();
-            this.txtphotoGrapher = new System.Windows.Forms.TextBox();
             this.mskDateTaken = new System.Windows.Forms.MaskedTextBox();
+            this.cmbPhotographer = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -58,8 +58,8 @@
             this.tblPanel.Controls.Add(this.label4, 0, 3);
             this.tblPanel.Controls.Add(this.txtphotoFile, 1, 0);
             this.tblPanel.Controls.Add(this.txtCaption, 1, 1);
-            this.tblPanel.Controls.Add(this.txtphotoGrapher, 1, 3);
             this.tblPanel.Controls.Add(this.mskDateTaken, 1, 2);
+            this.tblPanel.Controls.Add(this.cmbPhotographer, 1, 3);
             this.tblPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblPanel.Location = new System.Drawing.Point(0, 0);
             this.tblPanel.Name = "tblPanel";
@@ -131,13 +131,6 @@
             this.txtCaption.TabIndex = 3;
             this.txtCaption.TextChanged += new System.EventHandler(this.txtCaption_TextChanged);
             // 
-            // txtphotoGrapher
-            // 
-            this.txtphotoGrapher.Location = new System.Drawing.Point(92, 87);
-            this.txtphotoGrapher.Name = "txtphotoGrapher";
-            this.txtphotoGrapher.Size = new System.Drawing.Size(162, 20);
-            this.txtphotoGrapher.TabIndex = 7;
-            // 
             // mskDateTaken
             // 
             this.mskDateTaken.Location = new System.Drawing.Point(92, 59);
@@ -146,6 +139,19 @@
             this.mskDateTaken.Size = new System.Drawing.Size(162, 20);
             this.mskDateTaken.TabIndex = 5;
             this.mskDateTaken.TypeValidationCompleted += new System.Windows.Forms.TypeValidationEventHandler(this.mskDateTaken_TypeValidationCompleted);
+            // 
+            // cmbPhotographer
+            // 
+            this.cmbPhotographer.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbPhotographer.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbPhotographer.FormattingEnabled = true;
+            this.cmbPhotographer.Location = new System.Drawing.Point(92, 87);
+            this.cmbPhotographer.MaxDropDownItems = 4;
+            this.cmbPhotographer.Name = "cmbPhotographer";
+            this.cmbPhotographer.Size = new System.Drawing.Size(162, 21);
+            this.cmbPhotographer.Sorted = true;
+            this.cmbPhotographer.TabIndex = 7;
+            this.cmbPhotographer.Leave += new System.EventHandler(this.cmbPhotographer_Leave);
             // 
             // label5
             // 
@@ -194,9 +200,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtphotoFile;
         private System.Windows.Forms.TextBox txtCaption;
-        private System.Windows.Forms.TextBox txtphotoGrapher;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.MaskedTextBox mskDateTaken;
+        private System.Windows.Forms.ComboBox cmbPhotographer;
     }
 }

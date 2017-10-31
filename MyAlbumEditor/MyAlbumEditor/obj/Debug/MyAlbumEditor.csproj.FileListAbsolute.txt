@@ -1,0 +1,14 @@
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyAlbumEditor.exe.config
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyAlbumEditor.exe
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyAlbumEditor.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\bin\Debug\myphotoAlbum.dll
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyPhotoControls.dll
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\bin\Debug\myphotoAlbum.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\bin\Debug\MyPhotoControls.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.csprojResolveAssemblyReference.cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.EditorForm.resources
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.Properties.Resources.resources
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.csproj.GenerateResource.Cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.csproj.CoreCompileInputs.cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.exe
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumEditor\MyAlbumEditor\obj\Debug\MyAlbumEditor.pdb
