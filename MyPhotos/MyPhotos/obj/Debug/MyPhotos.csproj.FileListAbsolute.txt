@@ -26,3 +26,4 @@ E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\MyPhotos\obj\Debug\MyPhotos.cspr
 E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\MyPhotos\obj\Debug\MyPhotos.csproj.CoreCompileInputs.cache
 E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\MyPhotos\obj\Debug\MyPhotos.exe
 E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\MyPhotos\obj\Debug\MyPhotos.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotos\MyPhotos\obj\Debug\MyPhotos.SlideShowDialog.resources
