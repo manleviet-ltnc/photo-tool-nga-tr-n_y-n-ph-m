@@ -35,10 +35,32 @@ namespace MyPhotos
             get { return _dlgPixel; }
             set { _dlgPixel = value; }
         }
+
+        internal ToolStrip MainToolStrip
+        {
+            get { return toolStripMain; }
+        }
+
+        public string AlbumPath
+        {
+            get { return Manager.FullName; }
+        }
+
+        public string AlbumTitle
+        {
+            get { return Manager.Album.Title; }
+        }
+
+
         public MainForm()
         {
             InitializeComponent();
             NewAlbum();
+        }
+
+        public MainForm(string path, string pwd) : this()
+        {
+            Manager = new Albummanager(path, pwd);
         }
         private void NewAlbum()
         {
@@ -156,9 +178,9 @@ namespace MyPhotos
         {
             string path = null;
             string password = null;
-            if(AlbumController.OpenAlbumDialog(ref path, ref password))
-            {          
-                    if (!SaveAndCloseAlbum())
+            if (AlbumController.OpenAlbumDialog(ref path, ref password))
+            {
+                if (!SaveAndCloseAlbum())
                     return;
 
 
@@ -177,7 +199,7 @@ namespace MyPhotos
                 }
                 DisplayAlbum();
             }
-          
+
         }
         private void SaveAlbum(string name)
         {
@@ -213,8 +235,8 @@ namespace MyPhotos
         private void SaveAsAlbum()
         {
             string path = null;
-            if (AlbumController.SaveAlbumDialog (ref path))
-            { 
+            if (AlbumController.SaveAlbumDialog(ref path))
+            {
                 SaveAlbum(path);
                 //Update title bar to include new name
                 SetTitleBar();
@@ -222,12 +244,12 @@ namespace MyPhotos
         }
         private bool SaveAndCloseAlbum()
         {
-                DialogResult result = AlbumController.AskForSave(Manager);
- 
-                if (result == DialogResult.Yes)
-                    SaveAlbum();
-                else if (result == DialogResult.Cancel)
-                    return false;
+            DialogResult result = AlbumController.AskForSave(Manager);
+
+            if (result == DialogResult.Yes)
+                SaveAlbum();
+            else if (result == DialogResult.Cancel)
+                return false;
 
             if (Manager.Album != null)
                 Manager.Album.Dispose();
@@ -330,7 +352,7 @@ namespace MyPhotos
         {
             if (PixelForm == null || PixelForm.IsDisposed)
             {
-                PixelForm = new PixelDialog();
+                PixelForm = PixelDialog.GlobalInstance;
                 PixelForm.Owner = this;
 
             }
@@ -343,6 +365,9 @@ namespace MyPhotos
         }
         private void UpdatePixelDialog(int x, int y)
         {
+            if (IsMdiChild)
+                PixelForm = PixelDialog.GlobalInstance;
+
             if (PixelForm != null && PixelForm.Visible)
             {
                 Bitmap bmp = Manager.CurrentImage;
@@ -461,8 +486,21 @@ namespace MyPhotos
 
             tsdImage.DropDown = mnuImage.DropDown;
 
+            if (IsMdiChild)
+            {
+                menuStrip1.Visible = false;
+                DisplayAlbum();
+            }
+            if (this.IsMdiChild)
+            {
+                menuStrip1.Visible = false;
+                toolStripMain.Visible = false;
+                DisplayAlbum();
+            }
+
             base.OnLoad(e);
         }
+
         private void tsb_Click(Object sender, EventArgs e)
         {
             // Ensure sender is a menu item
@@ -534,8 +572,15 @@ namespace MyPhotos
                 tssSelect.DefaultItem = drop.Items[0];
             }
 
-            }
         }
+
+        protected override void OnEnter(EventArgs e)
+        {
+            if (IsMdiChild)
+                UpdatePixelButton( PixelDialog.GlobalInstance.Visible);
+            base.OnEnter(e);
+        }
+    }
 
     }
     
