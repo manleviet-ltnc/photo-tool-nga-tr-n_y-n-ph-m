@@ -1,0 +1,14 @@
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\bin\Debug\ScrollablePictureBoxText.exe.config
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\bin\Debug\ScrollablePictureBoxText.exe
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\bin\Debug\ScrollablePictureBoxText.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\obj\Debug\ScrollablePictureBoxTest.csprojResolveAssemblyReference.cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\obj\Debug\ScrollablePictureBoxText.Properties.Resources.resources
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\obj\Debug\ScrollablePictureBoxText.TestForm.resources
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\obj\Debug\ScrollablePictureBoxTest.csproj.GenerateResource.Cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\obj\Debug\ScrollablePictureBoxTest.csproj.CoreCompileInputs.cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\obj\Debug\ScrollablePictureBoxText.exe
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\obj\Debug\ScrollablePictureBoxText.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\bin\Debug\myphotoAlbum.dll
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\bin\Debug\MyPhotoControls.dll
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\bin\Debug\MyPhotoControls.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\ScrollablePictureBoxText\ScrollablePictureBoxText\bin\Debug\myphotoAlbum.pdb

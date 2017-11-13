@@ -1,0 +1,14 @@
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\bin\Debug\MyAlbumExplorer.exe.config
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\bin\Debug\MyAlbumExplorer.exe
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\bin\Debug\MyAlbumExplorer.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\bin\Debug\myphotoAlbum.dll
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\bin\Debug\MyPhotoControls.dll
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\bin\Debug\myphotoAlbum.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\bin\Debug\MyPhotoControls.pdb
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\obj\Debug\MyAlbumExplorer.csprojResolveAssemblyReference.cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\obj\Debug\MyAlbumExplorer.ExplorerForm.resources
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\obj\Debug\MyAlbumExplorer.Properties.Resources.resources
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\obj\Debug\MyAlbumExplorer.csproj.GenerateResource.Cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\obj\Debug\MyAlbumExplorer.csproj.CoreCompileInputs.cache
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\obj\Debug\MyAlbumExplorer.exe
+E:\github\photo-tool-nga-tr-n_y-n-ph-m\MyAlbumExplorer\MyAlbumExplorer\obj\Debug\MyAlbumExplorer.pdb
