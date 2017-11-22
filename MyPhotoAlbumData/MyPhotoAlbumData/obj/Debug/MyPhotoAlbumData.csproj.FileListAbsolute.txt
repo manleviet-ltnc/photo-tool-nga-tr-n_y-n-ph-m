@@ -1,0 +1,14 @@
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\bin\Debug\MyPhotoAlbumData.exe.config
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\bin\Debug\MyPhotoAlbumData.exe
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\bin\Debug\MyPhotoAlbumData.pdb
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\bin\Debug\myphotoAlbum.dll
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\bin\Debug\MyPhotoControls.dll
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\bin\Debug\myphotoAlbum.pdb
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\bin\Debug\MyPhotoControls.pdb
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\obj\Debug\MyPhotoAlbumData.csprojResolveAssemblyReference.cache
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\obj\Debug\MyPhotoAlbumData.DataForm.resources
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\obj\Debug\MyPhotoAlbumData.Properties.Resources.resources
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\obj\Debug\MyPhotoAlbumData.csproj.GenerateResource.Cache
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\obj\Debug\MyPhotoAlbumData.csproj.CoreCompileInputs.cache
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\obj\Debug\MyPhotoAlbumData.exe
+D:\github\photo-tool-nga-tr-n_y-n-ph-m\MyPhotoAlbumData\MyPhotoAlbumData\obj\Debug\MyPhotoAlbumData.pdb
